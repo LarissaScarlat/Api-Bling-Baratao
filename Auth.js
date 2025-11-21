@@ -12,10 +12,14 @@ import produtosRouter from "./Produtos.js"; // Importa as rotas de produtos do a
 // Em outras palavras:
 
 //JSON é uma forma padronizada de representar dados de forma leve, legível e fácil de processar por qualquer linguagem.
- 
+ import cors from "cors";
 
 const app = express(); // Cria uma instância do aplicativo Express assignando-a à constante app
 const PORT = process.env.PORT || 3000; // Define a porta do servidor a partir da variável de ambiente ou usa a porta 3000 como padrão
+
+
+app.use(cors());  
+app.use(express.json());
 
 // app = é o servidor express que criamos que seria const app = express(); - OBS: PRECISO ENTENDER MELHOR ESSE CODIGO APP *********
 //ATENÇÃO NA INFORMAÇÃO ABAIXO SOBRE O app.get
