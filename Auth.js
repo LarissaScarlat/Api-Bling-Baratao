@@ -3,6 +3,8 @@ import 'dotenv/config'; // Importa variaveis de ambiente do arquivo .env - como 
 import axios from "axios"; // Biblioteca para fazer requisições HTTP - Instalação via npm axios
 import qs from "querystring"; // Para montar o corpo x-www-form-urlencoded - usado quando voce envia via POST para apis que não aceitam JSON
 import crypto from "crypto";  // Para gerar o parâmetro 'state' aleatório - usado para segurança na autenticação OAuth. Gerar dados seguros e numeros aleatórios de segurança
+import fs from "fs";
+
 //_____ROTA DE AUTORIZAÇÃO__COMEÇO DA ROTA//
 //Json JSON significa JavaScript Object Notation.
 //  É um formato de texto usado pra trocar dados entre sistemas (como cliente ↔ servidor, ou entre APIs).
