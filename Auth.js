@@ -24,13 +24,13 @@ const PORT = process.env.PORT || 3000; // Define a porta do servidor a partir da
 app.get("/", (req, res) => {
   const state = crypto.randomBytes(16).toString("hex");
 
-  const authUrl = `${process.env.AUTH_URL}?response_type=code&client_id=${process.env.CLIENT_ID}&state=${state}&redirect_uri=${process.env.REDIRECT_URI}`;
+  const authUrl = `${process.env.AUTH_URL}?response_type=code&client_id=${process.env.CLIENT_ID}&redirect_uri=${encodeURIComponent(process.env.REDIRECT_URI)}&state=${state}`;
+
 
 
   console.log("🔗 Redirecionando para:", authUrl);
   res.redirect(authUrl);
 });
-
 //Informações sobre o codgio acima
 // o que seria AUTHURL - ATENÇÃO ESTUDAR SOBRE ISSO
 // AUTHURL SERIA URL DA BLING DE AUTORIZAÇÃO(EXEMPLO): https://bling.com.br/Authorization
