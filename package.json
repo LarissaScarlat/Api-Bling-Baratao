@@ -8,6 +8,7 @@
   },
   "name": "api-bling-baratao",
   "version": "1.0.0",
+  "types": "module",
   "description": "",
   "type": "commonjs",
   "main": "Auth.js",
