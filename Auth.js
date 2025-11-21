@@ -185,5 +185,5 @@ const tokenData = response.data;
 app.use("/", produtosRouter); // Todas as rotas definidas em produtosRouter serão prefixadas com /api
 
 app.listen(PORT, () => {
-    console.log(`🚀 Servidor rodando em http://localhost:${PORT}`);
+    console.log(`🚀 Servidor rodando em https://api-bling-baratao.onrender.com${PORT}`);
 }); // Inicia o servidor na porta definida e exibe uma mensagem no console indicando que o servidor está rodando
