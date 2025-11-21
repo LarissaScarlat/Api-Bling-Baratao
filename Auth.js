@@ -176,6 +176,7 @@ const tokenData = response.data;
     res.status(500).send("Erro ao obter tokens de acesso.");
   }
 });
+//_____ROTA DE CALLBACK__FIM DA ROTA//
 
 
 app.listen(PORT, () => {
