@@ -4,6 +4,7 @@ import axios from "axios"; // Biblioteca para fazer requisições HTTP - Instala
 import qs from "querystring"; // Para montar o corpo x-www-form-urlencoded - usado quando voce envia via POST para apis que não aceitam JSON
 import crypto from "crypto";  // Para gerar o parâmetro 'state' aleatório - usado para segurança na autenticação OAuth. Gerar dados seguros e numeros aleatórios de segurança
 import fs from "fs";
+import produtosRouter from "./Produtos.js"; // Importa as rotas de produtos do arquivo Produtos.js
 
 //_____ROTA DE AUTORIZAÇÃO__COMEÇO DA ROTA//
 //Json JSON significa JavaScript Object Notation.
@@ -180,6 +181,8 @@ const tokenData = response.data;
 });
 //_____ROTA DE CALLBACK__FIM DA ROTA//
 
+//importando as rotas de produtos para o aplicativo principal
+app.use("/", produtosRouter); // Todas as rotas definidas em produtosRouter serão prefixadas com /api
 
 app.listen(PORT, () => {
     console.log(`🚀 Servidor rodando em http://localhost:${PORT}`);
